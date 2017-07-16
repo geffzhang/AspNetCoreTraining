@@ -10,18 +10,26 @@ namespace DependencyInjection.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ISampleInterface _sampleService;
+        public readonly ISampleTransient _sampleTransient;
+        public readonly ISampleScoped _sampleScoped;
+        public readonly ISampleSingleton _sampleSingleton;
         private readonly ILogger _logger;
 
-        public HomeController(ISampleInterface sampleService, ILoggerFactory loggerFactory)
+        public HomeController(ISampleTransient sampleTransient, ISampleScoped sampleScoped, ISampleSingleton sampleSingleton, ILoggerFactory loggerFactory)
         {
-            _sampleService = sampleService;
+            _sampleTransient = sampleTransient;
+            _sampleScoped = sampleScoped;
+            _sampleSingleton = sampleSingleton;
             _logger = loggerFactory.CreateLogger<ManageController>();
         }
 
         public IActionResult Index()
         {
-            return View();
+            var message = $"<tr><td>Transient</td><td>{_sampleTransient.GetNumber()}</td></tr>"
+                       + $"<tr><td>Scoped</td><td>{_sampleScoped.GetNumber()}</td></tr>"
+                       + $"<tr><td>Singleton</td><td>{_sampleSingleton.GetNumber()}</td></tr>";
+            return View(model: message);
+
         }
 
         public IActionResult About()
@@ -45,7 +53,7 @@ namespace DependencyInjection.Controllers
 
         public int Number()
         {
-            return _sampleService.GetNumber();
+            return _sampleTransient.GetNumber();
         }
     }
 }

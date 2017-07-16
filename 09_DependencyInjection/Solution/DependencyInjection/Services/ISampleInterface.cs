@@ -9,4 +9,14 @@ namespace DependencyInjection.Services
     {
         int GetNumber();
     }
+
+    public interface ISampleTransient : ISampleInterface
+    {
+    }
+    public interface ISampleScoped : ISampleInterface
+    {
+    }
+    public interface ISampleSingleton : ISampleInterface
+    {
+    }
 }

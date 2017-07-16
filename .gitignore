@@ -3,3 +3,11 @@
 ################################################################################
 
 /01_Introduction/Starter/bin/Debug/netcoreapp1.1
+/01_Introduction/Starter/obj
+/03_Middleware/Solution/.vs
+/03_Middleware/Solution/Middleware/bin/Debug/netcoreapp1.1
+/03_Middleware/Solution/Middleware/obj
+/05_RoutingAndHosting/Demo/RoutingAndHosting/bin/Debug/netcoreapp1.1
+/05_RoutingAndHosting/Demo/RoutingAndHosting/obj
+/09_DependencyInjection/Solution/DependencyInjection/bin/Debug/netcoreapp1.1
+/09_DependencyInjection/Solution/DependencyInjection/obj

@@ -18,6 +18,7 @@ namespace RoutingAndHosting
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRouting();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,13 +65,21 @@ namespace RoutingAndHosting
                 return context.Response.WriteAsync($"Hi, {name}!");
             });
 
+
             var routes = rb.Build();
 
             app.UseRouter(routes);
 
-            app.Run(async (context) =>
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Hello World!");
+            //});
+
+            app.UseMvc(route =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                route.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

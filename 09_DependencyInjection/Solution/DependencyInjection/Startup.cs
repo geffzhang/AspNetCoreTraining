@@ -52,7 +52,10 @@ namespace DependencyInjection
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
-            services.AddTransient<ISampleInterface, SampleService>();
+            services.AddTransient<SampleService, SampleService>();
+            services.AddTransient<ISampleTransient, Sample>();
+            services.AddScoped<ISampleScoped, Sample>();
+            services.AddSingleton<ISampleSingleton, Sample>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
