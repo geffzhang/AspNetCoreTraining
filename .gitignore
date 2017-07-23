@@ -11,3 +11,11 @@
 /05_RoutingAndHosting/Demo/RoutingAndHosting/obj
 /09_DependencyInjection/Solution/DependencyInjection/bin/Debug/netcoreapp1.1
 /09_DependencyInjection/Solution/DependencyInjection/obj
+/04_StaticAndError/Solution/StaticAndError/bin/Debug/netcoreapp1.1
+/04_StaticAndError/Solution/StaticAndError/obj
+/01_Introduction/Starter/.vs/Introduction/v15/.suo
+/04_StaticAndError/Solution/.vs/StaticAndError/v15/.suo
+/05_RoutingAndHosting/Demo/.vs/RoutingAndHosting/v15/.suo
+/09_DependencyInjection/Solution/.vs/DependencyInjection/v15/sqlite3/storage.ide
+/10_filters/.gitignore
+/03_Middleware/Solution/Middleware/Middleware.csproj.user

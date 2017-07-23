@@ -2,11 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <AssemblyName>StaticAndError</AssemblyName>
   </PropertyGroup>
-
+  
+  <PropertyGroup>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
+  </PropertyGroup>
+  
   <ItemGroup>
     <Content Include="wwwroot\BlaBla.html" />
-    <Content Include="wwwroot\Index - Copy.html" />
     <Content Include="wwwroot\Index.html" />
     <Content Include="wwwroot\StaticFilesDir\SecondIndex.html" />
   </ItemGroup>
